@@ -1,6 +1,6 @@
 :root {
- --primary-color: rgba(209, 68, 190, 0.1);
- --overlay-color: rgba(95, 76, 206, 0.85);
+ --primary-color: rgba(209, 68, 190, 0.2);
+ --overlay-color: rgb(95, 76, 206);
  --menu-speed: 0.75s;
 }
 
@@ -48,6 +48,26 @@ body {
   height: 100%;
 }
 
+.showcase .showcase-inner .btn{
+  display: inline-block;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+  text-align: center;
+  height: 10%;
+  border-radius: 90%;
+  color: inherit;
+  background-color: rgba(123, 124, 124, 0.5);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  text-decoration: none;
+}
+
+/* .showcase .showcase-inner .btn:hover {
+  transition: opacity 1s ease-in;
+} */
+
 .showcase h1 {
   font-size: 4rem;
 }
@@ -56,7 +76,7 @@ body {
   font-size: 1.3rem;
 }
 
-.btn {
+/* .btn {
   display: inline-block;
   border: none;
   background-color: var(--primary-color);
@@ -64,7 +84,7 @@ body {
   padding: 0.75rem 1.5rem;
   margin-top: 1rem;
   text-decoration: none;
-  transition: opacity 1s ease-in;
+  transition: opacity 1s ease-in; */
 }
 
 .btn:hover {
