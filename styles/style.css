@@ -35,7 +35,7 @@ body {
 
 .showcase:before {
   content: '';
-  background: url('../img/buildings.jpg') no-repeat center center/cover;
+  background: url('../img/sky.jpg') no-repeat center center/cover;
   position: absolute;
   top: 0;
   left: 0;
@@ -53,16 +53,17 @@ body {
 }
 
 .showcase .showcase-inner .btn{
-  display: inline-block;
+  /* display: inline-block; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   height: 10%;
-  border-radius: 90%;
+  /* width: 20%; */
+  border-radius: 50%;
   color: inherit;
   background-color: rgba(123, 124, 124, 0.5);
-  border: none;
+  border: black;
   padding: 0.75rem 1.5rem;
   margin-top: 1rem;
   text-decoration: none;
@@ -109,10 +110,10 @@ body {
 
 /* Blog + project page styling */
 
-.showcase .showcase-inner .blogs {
+/* .showcase .showcase-inner .blogs {
   max-width: 960px;
   margin: 0 auto 30px;
-}
+} */
 
 article {
   position: relative;
@@ -173,4 +174,48 @@ article {
 .fa-twitter {
   background: #55ACEE;
   color: white;
+}
+
+/* scroller button */
+
+.fa-scroller {
+
+  background: rgb(12, 12, 12);
+  color: white;
+
+  
+  /* display: inline-block;
+  background: rgb(0, 0, 0);
+  color: white;
+  /* flex-wrap: wrap; */
+  /* padding: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%; */ */
+  
+}
+
+.showcase .showcase-inner .image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+
+.showcase .showcase-inner .errortext {
+  text-decoration: none;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 1px 1px;
+  grid-template-areas: ". . ." ". . ." ". . .";
 }

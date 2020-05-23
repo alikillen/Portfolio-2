@@ -24,7 +24,7 @@
   width: 60px;
   height: 60px;
   padding: 1rem;
-  background: var(--primary-color); 
+  /* background: var(--primary-color);  */
   /* will be inherited from style.css as its linked first in html */
   display: flex;
   align-items: center;
