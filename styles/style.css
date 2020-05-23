@@ -1,3 +1,7 @@
+/* @root
+  Padding: 0
+  Margin : 0 */
+
 :root {
  --primary-color: rgba(209, 68, 190, 0.2);
  --overlay-color: rgb(95, 76, 206);
@@ -50,9 +54,9 @@ body {
 
 .showcase .showcase-inner .btn{
   display: inline-block;
-  /* display: flex;
+  display: flex;
   flex-direction: column;
-  justify-content: center; */
+  justify-content: center;
   text-align: center;
   height: 10%;
   border-radius: 90%;
@@ -89,4 +93,84 @@ body {
 
 .btn:hover {
   opacity: 0.5;
+}
+
+.pdf {
+  border: none;
+}
+
+.pdf.downloadbutton {
+  display: flex;
+  border: none;
+  background-color: rgba(26, 240, 26)
+  z-index: 1;
+}
+
+
+/* Blog + project page styling */
+
+.showcase .showcase-inner .blogs {
+  max-width: 960px;
+  margin: 0 auto 30px;
+}
+
+article {
+  position: relative;
+}
+
+.showcase .showcase-inner .blog-img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.showcase .showcase-inner .blog-title {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Style for all social icons */
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+/* Hover effect on icons */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Specific color for each brand */
+
+/* Linkedin */
+.fa-linkedin {
+  background: #0073b1;
+  color: white;
+}
+
+/* Medium */
+.fa-medium {
+  background: rgb(0, 0, 0);
+  color: white;
+}
+
+/* Github */
+.fa-github {
+  background: rgb(12, 12, 12);
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
 }
