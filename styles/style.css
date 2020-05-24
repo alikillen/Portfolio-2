@@ -219,3 +219,7 @@ article {
   gap: 1px 1px;
   grid-template-areas: ". . ." ". . ." ". . .";
 }
+
+/* .showcase .showcase-inner .footertest {
+background-color: lawngreen;
+} */
