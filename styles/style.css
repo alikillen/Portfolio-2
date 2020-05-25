@@ -13,7 +13,7 @@
 /* determining menu colour, overlay colour and menu animation speed */
 :root {
  --primary-color: rgba(209, 68, 190, 0.2);
- --overlay-color: rgb(95, 76, 206);
+ --overlay-color: rgb(95, 76, 206, 0.9);
  --menu-speed: 0.75s;
  /* text-decoration: none; */
 }
