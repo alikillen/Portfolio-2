@@ -149,15 +149,24 @@ body {
 /* Resume page pdf styling */
 
 .showcase .showcase-inner .pdf {
-  display: grid;
-  /* align-content: center; */
+  
+display: flex;
+align-items: center;
+justify-content: center;
+
 }
 
 .showcase .showcase-inner .pdf .iframe {
-  max-width: 100%;
-  height: auto;
-  display: grid;
+  /* max-width: 100%;
+  height: auto; */
+  width: 100vw;
+  height: 100vh;
+  display: flex;
   align-content: center;
+  justify-content: center;
+
+
+  
 }
 
 
