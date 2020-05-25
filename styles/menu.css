@@ -1,4 +1,5 @@
 /* styling of menu - toggler and animation inside */
+/* menu has some issues on mobile - hover property and positioning - needs to be fixed */
 
 /* menu square position itself */
 .menu-wrap {
@@ -65,6 +66,7 @@ top: 10px;
 }
 
 /* toggler animate */
+/* using a checkbox to transition between clicked and non-clicked state */
 
 .menu-wrap .toggler:checked + .hamburger > div {
   transform: rotate(135deg);

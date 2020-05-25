@@ -1,13 +1,16 @@
 /* @root
   Padding: 0
   Margin : 0 */
+/* @import"https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" */
 
+/* some bits of code commented out are alternate ideas to come back to or fix :) */
 
+/* to get rid of scrollbars in chrome - will need to fix for other browsers */
   ::-webkit-scrollbar {
     display: none;
 }
 
-
+/* determining menu colour, overlay colour and menu animation speed */
 :root {
  --primary-color: rgba(209, 68, 190, 0.2);
  --overlay-color: rgb(95, 76, 206);
@@ -15,12 +18,15 @@
  /* text-decoration: none; */
 }
 
+/* resetting browser styling */
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* setting font in body but is not currently working on netlify deployed version, unsure why */
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.4;
@@ -33,23 +39,17 @@ body {
   padding: 0 3rem;
 }
 
-/* showcase class - covers entire page/vh - main container equivalent to body  */
+/* showcase class - covers entire page/vh - main container */
+/* overlay colour covering background */
 .showcase {
   background-color: var(--primary-color);
   color: #fff;
   height: 100vh;
   position: relative;
   text-align: center;
-  /* overflow: hidden; */
-
-  /* test grid layout - didnt work */
-
-  /* display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 10vw 30vw 10vw;
-  grid-gap: 1em; */
 }
 
+/* setting background */
 .showcase:before {
   content: '';
   background: url('../img/sky.jpg') no-repeat center center/cover;
@@ -61,27 +61,9 @@ body {
   z-index: -1;
 }
 
-/* .container {
-  width: 100vw;
-  height: 100vh;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: 20% 60% 20%;
-  grid-gap: 1em;
-  justify-content: center;
-  text-align: center;
-} */
 
 /* main content section */
 .showcase .showcase-inner {
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  height: 100%; */
-
-    /* test grid layout */
-
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: 20% 60% 20%;
@@ -94,7 +76,7 @@ body {
   overflow-y: scroll;
 }
 
-/* read more button not currently using
+/* read more button not currently using:
 .showcase .showcase-inner .btn{
   display: inline-block; comment out
   display: flex;
@@ -112,12 +94,8 @@ body {
   text-decoration: none;
 } */
 
-/* .showcase .showcase-inner .btn:hover {
-  transition: opacity 1s ease-in;
-} */
 
-/* remove grid stuff from h1 and p if needed */
-
+/* setting grid and font size for h1 and p */
 .showcase h1 {
   font-size: 4rem;
   grid-column: 1;
@@ -129,24 +107,13 @@ body {
   grid-column: 1;
 }
 
-/* grid styling for image and socials */
-
-/* .btn {
-  display: inline-block;
-  border: none;
-  background-color: var(--primary-color);
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  margin-top: 1rem;
-  text-decoration: none;
-  transition: opacity 1s ease-in; */
-}
-
+/* opacity when hovering over button */
 .btn:hover {
   opacity: 0.5;
 }
 
-/* Resume page pdf styling */
+/* Resume page pdf styling - need to make this grid not flex as it doesnt look great yet especially on mobile*/
+/* I used a sample pdf as uploading mine wasnt working on netlify - will fix later */
 
 .showcase .showcase-inner .pdf {
   
@@ -156,54 +123,30 @@ justify-content: center;
 
 }
 
+/* iframe styling to show pdf document - needs to be adjusted as it is too small */
 .showcase .showcase-inner .pdf .iframe {
-  /* max-width: 100%;
-  height: auto; */
-  width: 100vw;
-  height: 100vh;
+  max-width: 100%;
+  height: auto;
+  /* width: 100vw;
+  height: 100vh; */
   display: flex;
   align-content: center;
   justify-content: center;
-
-
-  
+ 
 }
 
+/* resume pdf download button styling - to be fixed */
 
 .showcase .showcase-inner .pdf .downloadbutton {
   display: grid;
   align-content: center;
   text-decoration: none;
- 
-  /* z-index: 1; */
+
 }
-
-
-/* Blog + project page styling */
-
-/* .showcase .showcase-inner .blogs {
-  max-width: 960px;
-  margin: 0 auto 30px;
-} */
 
 article {
   position: relative;
 }
-
-/* .showcase .showcase-inner .blog-img {
-  height: 200px;
-  width: 100%;
-  object-fit: cover;
-}
-
-.showcase .showcase-inner .blog-title {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 10px;
-  background-color: rgba(255, 255, 255, 0.2);
-} */
-
 
 
 /* Style for all social icons */
@@ -219,9 +162,6 @@ article {
   border-radius: 50%;
   grid-column: 1;
 
-/* grid-template-columns: repeat(auto-fill, 1fr);
-grid-column-gap: 1em;
-grid-row-gap: 1em; */
 }
 
 .socials {
@@ -240,9 +180,7 @@ grid-row-gap: 1em; */
   border-radius: 50%;
   grid-column: 1;
  
-  /* grid-template-columns: repeat(auto-fill, 1fr);
-grid-column-gap: 1em;
-grid-row-gap: 1em; */
+
 }
 
 /* Hover effect on icons */
@@ -276,40 +214,16 @@ grid-row-gap: 1em; */
   color: white;
 }
 
-/* scroller button */
+/* scroller button - not yet using, would like to add smooth scrolling in future */
 
-.fa-scroller {
+/* .fa-scroller {
 
   background: rgb(12, 12, 12);
   color: white;
-
   
-  /* display: inline-block;
-  background: rgb(0, 0, 0);
-  color: white;
-  /* flex-wrap: wrap; */
-  /* padding: 20px;
-  font-family: 'Roboto', sans-serif;
-  font-size: 30px;
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 50%; */ */
-  
-}
-
-/* .fa-ruby {
-
-}
-
-.fa-html {
-
-}
-
-.fa-css {
-
 } */
+
+/* styling for skills images below */
 
 .ruby {
   padding: 20px;
@@ -344,6 +258,7 @@ grid-row-gap: 1em; */
  
 }
 
+/* positioning of skills/languages images */
 .showcase .showcase-inner .skills {
  display: grid;
  
@@ -371,6 +286,7 @@ grid-row-gap: 1em; */
     
 }
 
+/* making sure user can scroll when p is overflowing */
 p {
   overflow-y: scroll;
 }
@@ -395,41 +311,26 @@ p {
 }
 
 .showcase .showcase-inner .blog-grid {
-/* grid-column: 1; */
 display: grid;
 justify-content: center;
-/* align-content: center; */
-/* text-align: left; */
 grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 grid-column-gap: 1em;
 grid-row-gap: 1em;
 height: 100vh;
 width: 100vw;
-/* margin: 20px, 20px, 20px, 20px; */
-
-/* grid-template-columns: 1fr 3fr; */
-/* overflow: hidden; */
-
 overflow-y: scroll;
 padding: 5%;
-
 }
 
 .showcase .showcase-inner .blog-grid .blog-title {
   justify-content: center;
-  /* text-align: match-parent; */
   text-decoration: none;
-  /* overflow-x: scroll; */
-
 }
 
 .showcase .showcase-inner .blog-grid .blog-img {
   border-radius: 50%;
   width: 200px;
   height: 200px;
-  /* align-items: center;
-  flex-direction: column;
-  justify-content: center; */
 }
 
 .showcase .showcase-inner .blog-grid .gif {
@@ -442,18 +343,6 @@ padding: 5%;
 .showcase .showcase-inner .blog-grid .blog-text {
   text-align: left;
 }
-
-/* .grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 1px 1px;
-  grid-template-areas: ". . ." ". . ." ". . .";
-} */
-
-/* .showcase .showcase-inner .footertest {
-background-color: lawngreen;
-} */
 
 .showcase .showcase-inner .text-box {
 
