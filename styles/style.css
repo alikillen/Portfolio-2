@@ -2,6 +2,12 @@
   Padding: 0
   Margin : 0 */
 
+  
+  ::-webkit-scrollbar {
+    display: none;
+}
+
+
 :root {
  --primary-color: rgba(209, 68, 190, 0.2);
  --overlay-color: rgb(95, 76, 206);
