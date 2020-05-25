@@ -85,6 +85,7 @@ body {
   width: 100vw;
   height: 100vh;
   /* overflow: hidden; */
+  overflow-y: scroll;
 }
 
 /* read more button not currently using
@@ -141,15 +142,25 @@ body {
 
 /* Resume page pdf styling */
 
-.pdf {
-  border: none;
+.showcase .showcase-inner .pdf {
+  display: grid;
+  /* align-content: center; */
 }
 
-.pdf.downloadbutton {
-  display: flex;
-  border: none;
-  background-color: rgba(26, 240, 26)
-  z-index: 1;
+.showcase .showcase-inner .pdf .iframe {
+  max-width: 100%;
+  height: auto;
+  display: grid;
+  align-content: center;
+}
+
+
+.showcase .showcase-inner .pdf .downloadbutton {
+  display: grid;
+  align-content: center;
+  text-decoration: none;
+ 
+  /* z-index: 1; */
 }
 
 
@@ -273,21 +284,80 @@ grid-row-gap: 1em; */
   
 }
 
-.showcase .showcase-inner .image {
-  /* display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center; */
+/* .fa-ruby {
+
+}
+
+.fa-html {
+
+}
+
+.fa-css {
+
+} */
+
+.ruby {
+  padding: 20px;
+   width: 100px;
+  height: 100px;
+  align-content: center;
+  border-radius: 10%;
+  /* display: flex; */
   
-  display: grid;
+}
+
+.html {
+  padding: 20px;
+  width: 100px;
+  height: 100px;
+  align-content: center;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10%;
+  /* display: flex; */
+ 
+}
+.css {
+  padding: 20px;
+  width: 100px;
+  height: 100px;
+  align-content: center;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10%;
+  /* display: flex; */
+ 
+}
+
+.showcase .showcase-inner .skills {
+ display: grid;
+ 
+  padding: 50px;
+  font-size: 30px;
+  width: 50px;
+  height: 50px;
+  align-content: center;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
   grid-column: 1;
+}
+
+.showcase .showcase-inner .image {
+ 
+  display: flex;
+  /* grid-column: 1; */
   border-radius: 50%;
   width: 200px;
   height: 200px;
   align-items: center;
-  flex-direction: column;
+  /* flex-direction: column; */
   justify-content: center;
-  
+    
+}
+
+p {
+  overflow-y: scroll;
 }
 
 .showcase .showcase-inner .title-home {
@@ -318,7 +388,6 @@ justify-content: center;
 grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 grid-column-gap: 1em;
 grid-row-gap: 1em;
-border-color: black;
 height: 100vh;
 width: 100vw;
 /* margin: 20px, 20px, 20px, 20px; */
@@ -335,6 +404,7 @@ padding: 5%;
   justify-content: center;
   /* text-align: match-parent; */
   text-decoration: none;
+  /* overflow-x: scroll; */
 
 }
 
@@ -346,6 +416,13 @@ padding: 5%;
   flex-direction: column;
   justify-content: center; */
 }
+
+.showcase .showcase-inner .blog-grid .gif {
+  border-radius: 5%;
+  max-width: 100%;
+  height: auto;
+}
+
 
 .showcase .showcase-inner .blog-grid .blog-text {
   text-align: left;
