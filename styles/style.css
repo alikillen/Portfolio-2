@@ -273,6 +273,7 @@ article {
   grid-column: 1;
 }
 
+
 .showcase .showcase-inner .image {
  
   display: flex;
@@ -300,7 +301,7 @@ p {
 }
 
 .showcase .showcase-inner .para-home {
-  display: grid;
+  display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
